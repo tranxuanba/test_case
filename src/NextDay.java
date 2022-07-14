@@ -2,12 +2,14 @@ public class NextDay {
 
 
     public static final String CONCATERNATION = "/";
+    public static final int STARTOFMONTH = 1;
 
     public static String getNextDay(int dayTest, int monthTest, int yearTest) {
         int day;
-        if (dayTest == 31) {
-            day = 1;
-            monthTest = monthTest + 1;
+        int lastOfMonth = 31;
+        if (dayTest == lastOfMonth) {
+            day = STARTOFMONTH;
+            monthTest++;
         } else {
             day = dayTest + 1;
         }
