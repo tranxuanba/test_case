@@ -48,4 +48,19 @@ class NextDayTest {
         //so sanh
         assertEquals(expect, result);
     }
+    @Test
+    @DisplayName("test case 4")
+    void testDay28Month2Year2018() {
+        //chuan bi du lieu
+        int dayTest = 28;
+        int monthTest = 2;
+        int yearTest = 2018;
+
+        String expect = "1/3/2018";
+        //chay phuong thuc
+        String result = NextDay.getNextDay(dayTest, monthTest, yearTest);
+        //so sanh
+        assertEquals(expect, result);
+    }
+
 }
