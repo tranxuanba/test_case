@@ -35,7 +35,7 @@ class NextDayTest {
     }
 
     @Test
-    @DisplayName("test case 2")
+    @DisplayName("test case 3")
     void testDay30Month4Year2018() {
         //chuan bi du lieu
         int dayTest = 30;

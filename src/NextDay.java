@@ -6,7 +6,26 @@ public class NextDay {
 
     public static String getNextDay(int dayTest, int monthTest, int yearTest) {
         int day;
-        int lastOfMonth = 31;
+        int lastOfMonth;
+        switch (monthTest) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+                lastOfMonth=31;
+                break;
+            case 2:
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                lastOfMonth=30;
+                break;
+            default:
+                lastOfMonth=31;
+        }
         if (dayTest == lastOfMonth) {
             day = STARTOFMONTH;
             monthTest++;
